@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script>
+    //Problema: Calcular valor da hora trabalhada
+    // Faça um script que peça para o usuário informar a quantidade de horas trabalhadas semanalmente e quanto que recebe por hora trabalhada.
+    // Se o total de horas trabalhadas for até 45 horas (inclusive), não haverá adicional.
+    // Se o total de horas trabalhadas for até 60 horas (inclusive), haverá adicional de 20%.
+    // Se o total de horas trabalhadas ultrapassar 60 horas, haverá adicional de 30%.
+    // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
+
+    //Entrada
+    const recebeHora = Number(prompt("quanto recebe por hora?"));
+    const horas = Number(prompt("quantas horas trabalhadas?"));
+    let resultado;
+    //Processamento
+    resultado = (horas <= 45) ? "Seu salário atual é " + (recebeHora + (recebeHora * horas)) + " reais e a hora trabalhada vale " + (recebeHora) + " reais." : (horas <= 60) ? "Seu salário atual é " + (recebeHora * horas + (recebeHora * 0.2)) + " reais e a hora trabalhada vale " + (recebeHora + (recebeHora * 0.2)) + " reais." : "Seu salário atual é " + (recebeHora * horas + (recebeHora * 0.3)) + " reais e a hora trabalhada vale " + (recebeHora + (recebeHora * 0.3)) + " reais.";
+
+    //Saída
+    alert(resultado);
+</script>
